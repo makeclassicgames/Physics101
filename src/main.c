@@ -1,11 +1,18 @@
+/*
+* Fisicas basicas: posicion, velocidad e inercia
+* Ejemplo basico de como implementar fisicas simples en un juego 2D
+* usando raylib.
+* Licencia MIT
+*/
 #include "raylib.h"
-
+ //estructura para el jugador
 typedef struct {
     Vector2 position;
     Vector2 velocity;
 } Player;
 
 int main(void) {
+    //inicializcion de la ventana y contexto GL
     InitWindow(800, 600, "Fisicas basicas: posicion, velocidad e inercia");
     SetTargetFPS(60);
 
@@ -43,7 +50,7 @@ int main(void) {
             DrawText("Usa flechas para mover con inercia", 10, 10, 20, DARKGRAY);
         EndDrawing();
     }
-
+    //cierre de la ventana y deinicion del contexto GL
     CloseWindow();
     return 0;
 }
